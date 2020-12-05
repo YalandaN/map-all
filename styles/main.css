@@ -13,6 +13,13 @@ h1 {
   font-size: 80%;
   letter-spacing: .3rem;
 }
+#map {
+  height: 500px;
+  width: 700px;
+  border: 1px dashed #333;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
 #map2 {
   height: 500px;
   width: 700px;
