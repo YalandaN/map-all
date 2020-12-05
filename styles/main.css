@@ -1,0 +1,46 @@
+body {
+    font-family: 'Roboto', Helvetica, sans-serif;
+    background: #EFEEEE;
+    color: #333;
+}
+h1 {
+  padding-top: 3rem;
+  text-align: center;
+}
+.tagline {
+  text-align: center;
+  color: #000080;
+  font-size: 80%;
+  letter-spacing: .3rem;
+}
+#map2 {
+  height: 500px;
+  width: 700px;
+  border: 1px dashed #333;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+.container {
+  margin: 0 auto;
+  justify-content: center;
+  display: flex;
+  flex: 1 1 auto;
+}
+.text {
+  max-width: 700px;
+  display: block;
+  margin: 0 auto;
+  padding-bottom: 3rem;
+}
+footer {
+  margin: 0 auto;
+  color: #333;
+  padding-bottom: 3rem;
+  text-align: center;
+  align-content: center;
+  line-height: 50%;
+}
+@media only screen and (max-width: 700px) {
+.text {
+  margin: 1rem;
+}}
