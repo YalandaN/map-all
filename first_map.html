@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>UF Maps</title>
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin="">
+
+    <link rel="stylesheet" href="styles/bootstrap.min.css">
+
+     <link rel="stylesheet" href="styles/main.css">
+
+  </head>
+
+  <body>
+
+       <h1>Map of Popular UF Libraries</h1>
+       <div class="tagline">
+         <p><em>"where Gators go to study"</em></p>
+       </div>
+
+    <div class="container">
+      <div id="map">
+      </div>
+
+    </div>
+
+    <div class="text">
+      <p>Above is a map of UF Campus Libraries, with the exception of the Fine Arts Library. All libraries marked are on the west side of campus, near University Ave. <br><br> Created by <b>Yalanda Nicolas</b> </p>
+
+    </div>
+
+   <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+   integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+   crossorigin=""></script>
+
+   <script>
+
+   let map = L.map('map').setView([29.645543,-82.345071], 14.72);
+
+   L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
+       attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+       maxZoom: 18,
+       id: 'mapbox/dark-v10',
+       tileSize: 512,
+       zoomOffset: -1,
+       accessToken: 'pk.eyJ1IjoieWFsYW5kYW4iLCJhIjoiY2tpNWFpamgxMDAwMjJybXFkczJvMjEwZiJ9._uQpAVvfoICvw7woiZH8Og'
+   }).addTo(map);
+
+
+   var marker1 = L.marker([29.6479899,-82.3439469]).addTo(map);
+    marker1.bindPopup("Marston Science Library").openPopup();
+
+   var marker2 = L.marker([29.639749,-82.34187]).addTo(map);
+   marker2.bindPopup("Health Science Library").openPopup();
+
+   var marker3 = L.marker([29.6513428,-82.34291]).addTo(map);
+   marker3.bindPopup("Library West").openPopup();
+
+   var marker4 = L.marker([29.6508647,-82.3417804]).addTo(map);
+   marker4.bindPopup("Smather's Library").openPopup();
+
+   var marker6 = L.marker([29.645980,-82.337140]).addTo(map);
+   marker6.bindPopup("Education Library").openPopup();
+
+ </script>
+
+  </body>
+  <footer>
+  <p>This map was created using Leaflet, Mapbox and Javascript.</p>
+  <p>By <b>Yalanda Nicolas</b></p>
+<p>View <a href="https://github.com/YalandaN/uf-map.git">my GitHub repo</a>.</p>
+</html>
