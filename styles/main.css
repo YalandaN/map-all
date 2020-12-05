@@ -39,6 +39,10 @@ h1 {
   margin: 0 auto;
   padding-bottom: 3rem;
 }
+.click {
+  text-align: center;
+  padding-bottom: 2rem;
+}
 footer {
   margin: 0 auto;
   color: #333;
